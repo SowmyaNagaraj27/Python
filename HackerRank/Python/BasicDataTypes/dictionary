@@ -1,0 +1,21 @@
+if __name__ == '__main__':
+    marks1 = list()
+    name1 = dict()
+    for _ in range(int(input())):
+        name = input()      
+        score = float(input())
+        #print('{} is {}'.format(name,score))
+        name1[name] = score
+        marks1.append(score)
+
+unq_marks=list(set(marks1))
+unq_marks.sort()
+second_least=unq_marks[1]
+#print(type(name1))
+keylist = list()
+for key,value in name1.items():
+    if value == second_least:
+       keylist.append(key)
+keylist.sort()
+for i in keylist:
+    print(i)    
